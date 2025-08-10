@@ -1,7 +1,19 @@
 "use client";
 
 import Link from "next/link";
-import { Facebook, Twitter, Instagram, Github, Mail, MapPin, Phone } from "lucide-react";
+import {
+  Facebook,
+  Twitter,
+  Instagram,
+  Github,
+  Mail,
+  Phone,
+  MapPin,
+  FileText,
+  BookOpen,
+  HelpCircle,
+  Calendar,
+} from "lucide-react";
 
 export default function Footer() {
   return (
@@ -16,6 +28,7 @@ export default function Footer() {
               className="flex items-center gap-2 text-2xl font-extrabold select-none"
               aria-label="Planora - Home"
             >
+              <Calendar size={26} className="text-amber-400" />
               <span className="leading-none">
                 <span className="text-sky-300">Plan</span>
                 <span className="text-amber-400">ora</span>
@@ -29,47 +42,60 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-white font-semibold mb-4 flex items-center gap-2">
+             
+              Quick Links
+            </h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/" className="hover:text-amber-400 transition">
+                <Link href="/" className="hover:text-amber-400 transition flex items-center gap-2">
+                  <Calendar size={16} />
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/events" className="hover:text-amber-400 transition">
+                <Link href="/events" className="hover:text-amber-400 transition flex items-center gap-2">
+                  <Calendar size={16} />
                   Events
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="hover:text-amber-400 transition">
+                <Link href="/blog" className="hover:text-amber-400 transition flex items-center gap-2">
+                  <FileText size={16} />
                   Blog
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-amber-400 transition">
+                <Link href="/contact" className="hover:text-amber-400 transition flex items-center gap-2">
+                  <Phone size={16} />
                   Contact
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Resources */}
+          {/* Terms & Conditions */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Resources</h3>
+            <h3 className="text-white font-semibold mb-4 flex items-center gap-2">
+            
+              Terms & Conditions
+            </h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/privacy-policy" className="hover:text-amber-400 transition">
+                <Link href="/privacy-policy" className="hover:text-amber-400 transition flex items-center gap-2">
+                  <FileText size={16} />
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="/terms" className="hover:text-amber-400 transition">
+                <Link href="/terms" className="hover:text-amber-400 transition flex items-center gap-2">
+                  <FileText size={16} />
                   Terms of Service
                 </Link>
               </li>
               <li>
-                <Link href="/faq" className="hover:text-amber-400 transition">
+                <Link href="/faq" className="hover:text-amber-400 transition flex items-center gap-2">
+                  <HelpCircle size={16} />
                   FAQ
                 </Link>
               </li>
@@ -78,7 +104,10 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Contact Us</h3>
+            <h3 className="text-white font-semibold mb-4 flex items-center gap-2">
+          
+              Contact Us
+            </h3>
             <ul className="space-y-2 text-sm">
               <li className="flex items-center gap-2">
                 <Mail size={16} className="text-amber-400" />
