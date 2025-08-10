@@ -61,6 +61,6 @@ This project serves as a comprehensive example showcasing proficiency in modern 
 Clone the repository:
 
 ```bash
-git clone https://github.com/ismail-dev-code/planora
+git clone https://github.com/ismail-dev-code/planora.git
 cd planora
 
