@@ -15,14 +15,13 @@ export const authOptions: NextAuthOptions = {
           return null;
         }
 
-        // Example: Replace with your real authentication logic
+
         const user = {
           id: "1",
           name: "J Smith",
           email: "jsmith@example.com",
         };
 
-        // Example: Validate credentials (hardcoded here for demo)
         if (
           credentials.username === "jsmith" &&
           credentials.password === "password123"
@@ -35,12 +34,12 @@ export const authOptions: NextAuthOptions = {
     }),
   ],
   pages: {
-    signIn: "/auth/signin", // optional custom sign-in page
+    signIn: "/auth/signin", 
   },
   session: {
     strategy: "jwt",
   },
-  secret: process.env.NEXTAUTH_SECRET, // must be set in .env
+  secret: process.env.NEXTAUTH_SECRET,
 };
 
 const handler = NextAuth(authOptions);

@@ -10,91 +10,19 @@ type Event = {
   description: string;
 };
 
-const demoEvents: Event[] = [
-  {
-    id: "1",
-    title: "React Conference 2025",
-    date: "2025-09-15",
-    location: "New York, NY",
-    description: "A conference focusing on React and its ecosystem.",
-  },
-  {
-    id: "2",
-    title: "JavaScript Meetup",
-    date: "2025-09-20",
-    location: "San Francisco, CA",
-    description: "Monthly meetup for JavaScript developers.",
-  },
-  {
-    id: "3",
-    title: "Next.js Workshop",
-    date: "2025-10-05",
-    location: "Austin, TX",
-    description: "Hands-on workshop on Next.js 14 features.",
-  },
-  {
-    id: "4",
-    title: "Frontend Masters Webinar",
-    date: "2025-10-10",
-    location: "Online",
-    description: "Webinar covering advanced frontend techniques.",
-  },
-  {
-    id: "5",
-    title: "CSS Grid and Flexbox Bootcamp",
-    date: "2025-10-22",
-    location: "Seattle, WA",
-    description: "Learn modern layout techniques for web apps.",
-  },
-  {
-    id: "6",
-    title: "TypeScript Deep Dive",
-    date: "2025-11-01",
-    location: "Boston, MA",
-    description: "In-depth session on TypeScript best practices.",
-  },
-  {
-    id: "7",
-    title: "Node.js Backend Conference",
-    date: "2025-11-12",
-    location: "Chicago, IL",
-    description: "Backend development with Node.js and Express.",
-  },
-  {
-    id: "8",
-    title: "GraphQL Summit",
-    date: "2025-11-20",
-    location: "Denver, CO",
-    description: "Explore GraphQL and API design patterns.",
-  },
-  {
-    id: "9",
-    title: "Web Accessibility Bootcamp",
-    date: "2025-12-02",
-    location: "Portland, OR",
-    description: "Improving accessibility in modern web apps.",
-  },
-  {
-    id: "10",
-    title: "Jamstack Conf",
-    date: "2025-12-15",
-    location: "Los Angeles, CA",
-    description: "Static sites and modern web architecture.",
-  },
-];
-
 export default function EventsPage() {
-  const [events, setEvents] = useState<Event[]>(demoEvents);
-  const [loading, setLoading] = useState(false);
+  const [events, setEvents] = useState<Event[]>([]);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-
   useEffect(() => {
+    // Simulate fetching data from API
     async function fetchEvents() {
       try {
         setLoading(true);
         setError(null);
 
+        // Replace with your API endpoint or server call
         const res = await fetch("/api/events");
         if (!res.ok) {
           throw new Error("Failed to fetch events");
@@ -113,6 +41,7 @@ export default function EventsPage() {
       }
     }
 
+    fetchEvents();
   }, []);
 
   return (
