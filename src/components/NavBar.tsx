@@ -31,8 +31,7 @@ const navLinks: NavLink[] = [
 
 const dashboardLinks: NavLink[] = [
   { href: "/dashboard", label: "Dashboard", icon: <LayoutDashboard size={18} /> },
-  { href: "/bookings", label: "Bookings", icon: <Bookmark size={18} /> },
-  { href: "/events/create", label: "Create Event", icon: <PlusCircle size={18} /> },
+ 
 ];
 
 export default function Navbar() {
